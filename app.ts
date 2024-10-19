@@ -1,80 +1,47 @@
-//listing
-document
-  .getElementById("resume-form")
-  ?.addEventListener("submit", function (event) {
+
+//Resume form display
+const form = document.getElementById("resume-form") as HTMLFormElement;
+const output = document.getElementById("resumeOutput") as HTMLBodyElement;
+
+//Generate resume
+
+form.addEventListener('submit', (event:Event) =>{
     event.preventDefault();
 
-    //type assertion
-    const nameElement = document.getElementById("name") as HTMLInputElement;
-    const emailElement = document.getElementById("email") as HTMLInputElement;
-    const phoneElement = document.getElementById("phone") as HTMLInputElement;
-    const addressElement = document.getElementById(
-      "address"
-    ) as HTMLInputElement;
-    const educationElement = document.getElementById(
-      "education"
-    ) as HTMLInputElement;
-    const experienceElement = document.getElementById(
-      "experience"
-    ) as HTMLInputElement;
-    const skillsElement = document.getElementById("skills") as HTMLInputElement;
+   
 
-    if (
-      nameElement &&
-      emailElement &&
-      phoneElement &&
-      addressElement &&
-      educationElement &&
-      experienceElement &&
-      skillsElement
-    ) {
-      const name = nameElement.value;
-      const email = emailElement.value;
-      const phone = phoneElement.value;
-      const address = addressElement.value;
-      const education = educationElement.value;
-      const experience = experienceElement.value;
-      const skills = skillsElement.value;
+    //collect input
 
-      // Validate that all fields are filled
-      if (
-        nameElement &&
-        emailElement &&
-        phoneElement &&
-        addressElement &&
-        educationElement &&
-        experienceElement &&
-        skillsElement
-      ) {
-        // Create resume HTML
-        const resumeOutput = `
-            <h2>Resume</h2>
-            <p><strong>Name:</strong> ${name}</p>
-            <p><strong>Email:</strong> ${email}</p>
-            <p><strong>Phone Number:</strong> ${phone}</p>
-            <p><strong>Address:</strong> ${address}</p>
-            
-            <h3>Education</h3>
-            <p>${education}</p>
-            
-            <h3>Experience</h3>
-            <p>${experience}</p>
-            
-            <h3>Skills</h3>
-            <p>${skills}</p>
-        `;
+    const name = (document.getElementById('name') as HTMLInputElement).value;
+    const email = (document.getElementById('email') as HTMLInputElement).value;
+    const phone = (document.getElementById('phone') as HTMLInputElement).value;
+    const address = (document.getElementById('address') as HTMLInputElement).value;
+    const education = (document.getElementById('education') as HTMLInputElement).value;
+    const experience = (document.getElementById('experience') as HTMLInputElement).value;
+    const skills= (document.getElementById('skills') as HTMLInputElement).value;
+   
+    //generate resume content dynamically
+   const resumeHtml = `
 
-        // Output resume to the page
-        const resumeOutputElement = document.getElementById("resumeOutput");
-        if (resumeOutputElement) {
-          resumeOutputElement.innerHTML = resumeOutput;
-        } else {
-          console.error("Element with ID result is missing.");
-        }
-      } else {
-        alert("Please fill out all fields.");
-      }
-    } else {
-      console.error("One or more form elements are missing.");
-    }
-  });
+   <h2>Editable Resume</h2>
+   <h3>Personal Information</h3>
+   <p><b>Name:</b><span contenteditable="true">${name}</span></p>
+   <p><b>Email:</b><span contenteditable="true">${email}</span></p>
+   <p><b>Phone:</b><span contenteditable="true">${phone}</span></p>
+   <p><b>Address:</b><span contenteditable="true">${address}</span></p>
+    <h3>Education</h3>
+   <p contenteditable="true">${education}</p>
+    <h3>Experience</h3
+    <p contenteditable="true">${experience}</p>
+    <h3>Skills</h3>
+    <p contenteditable="true">${skills}</p>
+    </div>
+    `;
+
+if(output){
+    output.innerHTML = resumeHtml;
+}else{
+    console.error("Resume Element is missing")
+}
+
+});

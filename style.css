@@ -296,16 +296,15 @@ h3 {
   }
 }
 
-@media print{
-  #resume-input{
-  display: none;
-  }
-  }
 
 @media print{
   #resume-input{
   display: none;
-  /* for adding color in mobile screen */
+ 
+  }
+
+  body{
+     /* for adding color in mobile screen */
   -webkit-print-color-adjust:exact; 
 
   }

@@ -295,3 +295,9 @@ h3 {
     left: 50px;
   }
 }
+
+@media print{
+  #resume-input{
+  display: none;
+  }
+  }

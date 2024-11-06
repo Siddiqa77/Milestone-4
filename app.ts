@@ -107,36 +107,36 @@ function generateResume(data: ResumeData): void {
               <!-- Career Objective -->
               <div class="form-group">
                 <label for="career-objective">About Me</label>
-                <textarea id="career-objective" placeholder="Enter your career objective" contenteditable="true" readonly required>${data.about}</textarea>
+                <textarea id="career-objective" placeholder="Enter your career objective" contenteditable="true" >${data.about}</textarea>
               </div>
     
               <!-- Certification 1 -->
               <div class="form-group">
                 <label for="cert1-name">Certification 1 Name</label>
-                <input type="text" id="cert1-name" placeholder="Enter the name of your first certification" contenteditable="true" value="${data.cert1name}" readonly required>
+                <input type="text" id="cert1-name" placeholder="Enter the name of your first certification" contenteditable="true" value="${data.cert1name}" >
               </div>
     
               <div class="form-group">
                 <label for="cert1-description">Certification 1 Description</label>
                 <textarea id="cert1-description" readonly placeholder="Enter a description for your first certification" contenteditable="true"
-                  required>${data.cert1desc}</textarea>
+                  >${data.cert1desc}</textarea>
               </div>
     
               <!-- Certification 2 -->
               <div class="form-group">
                 <label for="cert2-name">Certification 2 Name</label>
-                <input type="text" id="cert2-name" readonly placeholder="Enter the name of your second certification" contenteditable="true" value="${data.cert2name}" required>
+                <input type="text" id="cert2-name" readonly placeholder="Enter the name of your second certification" contenteditable="true" value="${data.cert2name}" >
               </div>
     
               <div class="form-group">
                 <label for="cert2-description">Certification 2 Description</label>
                 <textarea id="cert2-description" readonly placeholder="Enter a description for your second certification" contenteditable="true"
-                  required>${data.cert2desc}</textarea>
+                  >${data.cert2desc}</textarea>
               </div>
                <div class="form-group">
                 <label for="language">Language</label>
                 <textarea class="text" id="language" placeholder="languages" contenteditable="true"
-                  required>${data.language}</textarea>
+                  >${data.language}</textarea>
               </div>
             </form>
           </div>
@@ -151,38 +151,38 @@ function generateResume(data: ResumeData): void {
           
               <div class="form-group">
                 <label for="name">Full Name</label>
-                <input type="text" id="name" placeholder="Enter your name" contenteditable="true" value="${data.name}" readonly required>
+                <input type="text" id="name" placeholder="Enter your name" contenteditable="true" value="${data.name}">
               </div>
              
     
               <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Enter your email" contenteditable="true" value="${data.email}" readonly required>
+                <input type="email" id="email" placeholder="Enter your email" contenteditable="true" value="${data.email}">
               </div>
     
               <div class="form-group">
                 <label for="phone">Phone Number</label>
-                <input type="text" id="phone" placeholder="Enter your phone number" contenteditable="true" value="${data.phone}" readonly required>
+                <input type="text" id="phone" placeholder="Enter your phone number" contenteditable="true" value="${data.phone}" >
               </div>
     
               <div class="form-group">
                 <label for="address">Address</label>
-                <input type="text" id="address" placeholder="Enter your address" contenteditable="true" value="${data.address}" readonly required>
+                <input type="text" id="address" placeholder="Enter your address" contenteditable="true" value="${data.address}" >
               </div>
     
               <div class="form-group">
                 <label for="skills">Skills</label>
-                <textarea id="skills" placeholder="List your skills (comma-separated)" contenteditable="true" readonly required>${data.skills}</textarea>
+                <textarea id="skills" placeholder="List your skills (comma-separated)" contenteditable="true" >${data.skills}</textarea>
               </div>
     
               <div class="form-group">
                 <label for="experience">Experience</label>
-                <textarea id="experience" placeholder="Describe your experience" contenteditable="true" readonly required>${data.experience}</textarea>
+                <textarea id="experience" placeholder="Describe your experience" contenteditable="true" >${data.experience}</textarea>
               </div>
     
               <div class="form-group">
                 <label for="education">Education</label>
-                <textarea id="education" placeholder="Describe your education" contenteditable="true" readonly required>${data.education}</textarea>
+                <textarea id="education" placeholder="Describe your education" contenteditable="true" >${data.education}</textarea>
               </div>
     
             </form>

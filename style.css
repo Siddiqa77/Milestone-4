@@ -295,3 +295,16 @@ h3 {
     left: 50px;
   }
 }
+
+@media print{
+  #resume-input{
+  display: none;
+  /* for adding color in mobile screen */
+  -webkit-print-color-adjust:exact; 
+
+  }
+
+  .button{
+    display: none;
+  }
+  }
